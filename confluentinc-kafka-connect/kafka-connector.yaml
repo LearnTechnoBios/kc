@@ -1,0 +1,20 @@
+apiVersion: kafka.strimzi.io/v1alpha1
+kind: KafkaConnector
+metadata:
+  name: syslog-connector-1
+  labels:
+    strimzi.io/cluster: my-connect-cluster
+  namespace: techno-proj
+spec:
+  class: io.confluent.connect.syslog.SyslogSourceConnector
+  config:
+    confluent.topic: topic-confluent
+    # TODO: change bootstrap servers below. Find yours inside Kafka's YAML.
+    confluent.topic.bootstrap.servers: 'my-cluster-kafka-bootstrap:9092, my-cluster-kafka-bootstrap:9093'
+    errors.log.enable: true
+    errors.log.include.messages: true
+    syslog.listen.address: 0.0.0.0
+    syslog.listener: UDP
+    syslog.port: 42514
+    topic: topic-syslog-1
+
