@@ -9,7 +9,7 @@ spec:
   version: 2.5.0
   replicas: 1
   # TODO: change bootstrap servers below. Find yours inside Kafka's YAML.
-  bootstrapServers: my-cluster-kafka-bootstrap.x1.svc:9092, my-cluster-kafka-bootstrap.x1.svc:9093
+  bootstrapServers: my-cluster-kafka-bootstrap.techno-proj.svc:9092, my-cluster-kafka-bootstrap.techno-proj.svc:9093
 tls:
   trustedCertificates:
     - secretName: my-cluster-cluster-ca-cert
