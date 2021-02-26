@@ -15,6 +15,6 @@ spec:
     errors.log.include.messages: true
     syslog.listen.address: 0.0.0.0
     syslog.listener: UDP
-    syslog.port: 42514
+    syslog.port: 32000
     topic: topic-syslog-1
 
